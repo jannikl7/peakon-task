@@ -1,5 +1,7 @@
 var assert = require("assert");
 
+describe;
+
 describe("register", () => {
   it("should return  http code 200 when trying to register webhook", () => {
     //call localhost:9876/register with body

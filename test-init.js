@@ -1,8 +1,13 @@
 const axios = require("axios");
 let lServerAdr, lServerPort, lClientAdr, LClientPort;
 
-function testPortNum(portNum) {
-  axios.post();
+function testCallWebhooks(clientId) {
+  axios
+    .post(`http://${lServerAdr}:${lServerPort}/execute`, {
+      clientId: clientId,
+      payload: ["any", { valid: "payload" }],
+    })
+    .then(console.log(`Successfully called `));
 }
 
 /**
