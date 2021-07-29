@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "d707a020-3e1d-4a57-9214-7efc8c7f5cca",
+		"name": "peakon-webhooks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9876/api/webhooks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientId\": \"client 3\",\r\n    \"url\": \"http://localhost:1234/hook\",\r\n    \"token\": \"mytoken1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9876/api/webhooks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9876",
+					"path": [
+						"api",
+						"webhooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9876/api/webhooks/test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientId\": \"client 1\",\r\n    \"payload\": [\"any\", {\"valid\": \"payload\"}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9876/api/webhooks/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9876",
+					"path": [
+						"api",
+						"webhooks",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:1234/hook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n          \"token\": \"token\",\r\n          \"payload\": \"payload\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1234/hook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1234",
+					"path": [
+						"hook"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
