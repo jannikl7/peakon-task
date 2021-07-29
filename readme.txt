@@ -3,8 +3,8 @@ solved by Jannik Hendriksen.
 
 The solution is developed in Javascript as a node.js application.
 It depends on the following nodejs modules:
-axios
-express
+axios (npm install axios or see https://axios-http.com/docs/intro)
+express (npm install express --save or see https://expressjs.com/en/starter/installing.html)
 
 -- Starting the application --
 From the root directory:
